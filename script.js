@@ -80,7 +80,7 @@ async function transformWord() {
   document.getElementById("result").innerHTML = `
             <p>Original word: ${newWord}</p>
             <p>Transformed word: ${resultWord}</p>
-            <p>Gender: ${gender == 'ср'? 'neutro': gender }</p>
+            <p>Gender: ${gender == 'ср'? 'neutro': gender == 'ж' ? 'femenino' : gender }</p>
             <p>Translation: ${translation}</p>
             <p>Animated: ${isAnimated}</p>
         `;
