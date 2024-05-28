@@ -822,10 +822,73 @@
 		.checkbox-off {
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 		}
+
+		.container {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 300px;
+		}
+
+		.container h1 {
+			font-size: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.container h2 {
+			font-size: 16px;
+			margin-bottom: 15px;
+			text-align: center;
+			color: #555;
+		}
+
+		.wordInput {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.transformButton {
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #007bff;
+			color: white;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 25px;
+		}
+
+		.transformButton:hover {
+			background-color: #0056b3;
+			
+		}
+
+		.result {
+			margin-top: 20px;
+			text-align: center;
+			font-size: 14px;
+			color: #333;
+		}
 	</style>
 </head>
 
 <body>
+	<article class="container">
+		<h1>Enter  para transformar palabra Caso acusativo ( Винительный падеж )</h1>
+		<h2>primer caso</h2>
+		<input type="text" id="wordInput" placeholder="Enter word">
+		<button class="transformButton" onclick="transformWord()">Transform</button>
+		<div id="result" class="result"></div>
+	</article>
+
 	<article id="c3e0069a-c57b-4f8a-b5d5-580aeb7994fd" class="page sans">
 		<header>
 			<div class="page-header-icon undefined"><span class="icon">📓</span></div>
@@ -906,6 +969,7 @@
 			</figure>
 		</div>
 	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+	<script src="script.js"></script>
 </body>
 <footer>
 	<h2>By manu castelnovo</h2>
